@@ -1,0 +1,24 @@
+# Manifest del consumidor. Contrato e inventario a la vez (ARCHITECTURE.md §2.1).
+week: 21
+name: checklist-walker
+core_version: 1.3.0
+
+reused_modules:
+  - llm-client
+  - schema-validate
+  - secure-base
+  - test-kit
+  - cache-ratelimit
+  - parser-io
+  - agent-loop
+
+new_surface:
+  - "checklist ejecutable: ítems existe:/contiene: caminados por un agente con herramientas de lectura"
+  - "seed de agent-loop (C13, sem. 21): loop con puerta humana, presupuesto de pasos y trace auditable"
+  - "cerebro determinista por guion — el LLM solo reporta; el walk es reproducible (D4)"
+  - "marcado del checklist ([x]/[ ]) desde el resultado medido de las herramientas"
+
+estimated_new_surface: 25
+
+# Presupuesto máximo de evals en USD por semana (ARCHITECTURE.md §8.1).
+eval_budget_usd: 2.0
